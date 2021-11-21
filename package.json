@@ -1,0 +1,43 @@
+{
+  "name": "boilerplate",
+  "description": "",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=16.x"
+  },
+  "scripts": {
+    "format": "prettier-standard --lint",
+    "lint": "prettier-standard --check --lint && tsc",
+    "prepare": "husky install || true",
+    "copyenv": "node -e \"fs.copyFileSync('.env.example', '.env', fs.constants.COPYFILE_EXCL)\"",
+    "start": "node src/bin/app.js",
+    "start:dev": "nodemon --inspect=0.0.0.0:9229 src/bin/app.js | pino-pretty -c -i hostname,pid,time,name",
+    "key:generate": "node src/bin/app.js key:generate",
+    "docker:up": "docker compose up --build --detach --quiet-pull --remove-orphans --renew-anon-volumes",
+    "docker:down": "docker compose down --remove-orphans --volumes"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.5.0",
+    "commander": "^8.3.0",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.24.0",
+    "fastify-helmet": "^5.3.2",
+    "id128": "^1.6.6",
+    "pino": "^7.3.0",
+    "prisma": "^3.5.0",
+    "zod": "^3.11.6"
+  },
+  "devDependencies": {
+    "@ksmithut/prettier-standard": "^0.0.5",
+    "@types/node": "^16.11.9",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "nodemon": "^2.0.15",
+    "pino-pretty": "^7.2.0",
+    "standard": "^16.0.4",
+    "typescript": "^4.5.2"
+  }
+}
