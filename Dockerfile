@@ -9,7 +9,7 @@ USER node
 WORKDIR /app
 
 # Install dependencies
-COPY --chown=node:node package.json package-lock.json ./
+COPY --chown=node:node package.json yarn.lock ./
 COPY --chown=node:node prisma prisma
 RUN yarn --frozen-lockfile --production
 
