@@ -6,11 +6,7 @@ import { logLevelSchema } from './utils/pino.js'
  */
 
 export const configSchema = z.object({
-  port: z
-    .number()
-    .int()
-    .min(1)
-    .max(2 ** 16 - 1),
+  port: z.number().int().min(1).max(65535),
   logName: z.string(),
   logLevel: logLevelSchema,
   postgresURL: z.string().url()
