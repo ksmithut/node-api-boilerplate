@@ -26,19 +26,18 @@
     "fastify": "^3.24.0",
     "fastify-helmet": "^5.3.2",
     "id128": "^1.6.6",
-    "pino": "^7.4.0",
+    "pino": "^7.4.1",
     "prisma": "^3.5.0",
     "zod": "^3.11.6"
   },
   "devDependencies": {
-    "@ksmithut/prettier-standard": "^0.0.6",
+    "@ksmithut/prettier-standard": "^0.0.7",
     "@types/node": "^16.11.10",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-config-standard-jsx": "^10.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
     "nodemon": "^2.0.15",
     "pino-pretty": "^7.2.0",
+    "standard": "^16.0.4",
     "typescript": "^4.5.2"
   }
 }
