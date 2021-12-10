@@ -9,7 +9,7 @@ import { notFoundHandler, errorHandler } from './utils/fastify.js'
  * @param {object} params
  * @param {number} params.port
  * @param {string} [params.host]
- * @param {import('pino').P.BaseLogger} params.logger
+ * @param {import('pino').Logger} params.logger
  */
 export async function startServer ({ port, host = '0.0.0.0', logger }) {
   const app = fastify({
