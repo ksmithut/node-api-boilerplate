@@ -1,7 +1,7 @@
 import fastify from 'fastify'
 import fastifyHelmet from 'fastify-helmet'
 import { ulid } from './lib/id.js'
-import { timeout } from './lib/timeout.js'
+import timeout from './lib/timeout.js'
 import { fastifyZodValidator } from './lib/fastify-zod-validator.js'
 import { notFoundHandler, errorHandler } from './utils/fastify.js'
 
