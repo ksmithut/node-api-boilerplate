@@ -28,7 +28,7 @@
     "id128": "^1.6.6",
     "pino": "^7.9.1",
     "prisma": "^3.11.0",
-    "zod": "^3.14.1"
+    "zod": "^3.14.2"
   },
   "devDependencies": {
     "@ksmithut/prettier-standard": "^0.0.11",
