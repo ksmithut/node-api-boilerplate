@@ -1,7 +1,7 @@
-import process from 'node:process'
-import 'dotenv/config'
 import { Command } from 'commander'
-import { parseEnv, ConfigError } from '../config.js'
+import 'dotenv/config'
+import process from 'node:process'
+import { ConfigError, parseEnv } from '../config.js'
 import { configureApp } from '../index.js'
 
 const program = new Command()

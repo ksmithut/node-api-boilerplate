@@ -1,8 +1,8 @@
 import prismaClient from '@prisma/client'
-import { once } from './lib/once.js'
-import { configureLogger } from './utils/pino.js'
 import { configSchema } from './config.js'
+import { once } from './lib/once.js'
 import { startServer } from './server.js'
+import { configureLogger } from './utils/pino.js'
 
 /**
  * @param {import('./config').AppConfig} config

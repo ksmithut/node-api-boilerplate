@@ -268,8 +268,8 @@ CMD [ "node", "src/bin/app.js" ]
 `vite.config.js`
 
 ```js
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
 
 const { DEV_PORT = '3001', API_PROXY = 'http://localhost:3000' } = process.env
 
@@ -396,12 +396,12 @@ const jsonWebKeySchema = z.object({
 const jsonWebKeySetSchema = z.object({
   keys: z.array(jsonWebKeySchema).min(1)
 })
-//...
+// ...
 export const configSchema = z.object({
   // ...
   jwks: jsonWebKeySetSchema
 })
-//...
+// ...
 const envSchema = z
   .object({
     // ...
@@ -437,8 +437,8 @@ export function configureApp (config) {
 `src/bin/app.js`
 
 ```js
-import { generate } from 'jawt'
 import { Command, InvalidArgumentError } from 'commander'
+import { generate } from 'jawt'
 // ...
 const KEY_ALGORITHMS = new Set([
   'HS256',
@@ -661,9 +661,9 @@ export default makeExecutableSchema({
 `src/server.js`
 
 ```js
-import { ApolloServer } from 'apollo-server-fastify'
-import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core'
 import { mergeSchemas } from '@graphql-tools/schema'
+import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core'
+import { ApolloServer } from 'apollo-server-fastify'
 import { fastifyAppClosePlugin } from './lib/fastify-app-close-plugin.js'
 // ...
 import rootSchema from './utils/apollo-schema.js'
@@ -855,8 +855,8 @@ function encodeCursor (data) {
 `src/services/example/example.apollo.js`
 
 ```js
-import { gql } from 'apollo-server-core'
 import { makeExecutableSchema } from '@graphql-tools/schema'
+import { gql } from 'apollo-server-core'
 import { decodeNodeId, encodeNodeId } from '../../lib/graphql-id.js'
 import rootTypeDefs from '../../utils/apollo-types.js'
 

@@ -1,9 +1,9 @@
 import fastify from 'fastify'
 import fastifyHelmet from 'fastify-helmet'
+import { fastifyZodValidator } from './lib/fastify-zod-validator.js'
 import { ulid } from './lib/id.js'
 import timeout from './lib/timeout.js'
-import { fastifyZodValidator } from './lib/fastify-zod-validator.js'
-import { notFoundHandler, errorHandler } from './utils/fastify.js'
+import { errorHandler, notFoundHandler } from './utils/fastify.js'
 
 /**
  * @param {object} params
