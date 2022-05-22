@@ -1,5 +1,5 @@
 import fastify from 'fastify'
-import fastifyHelmet from 'fastify-helmet'
+import fastifyHelmet from '@fastify/helmet'
 import { fastifyZodValidator } from './lib/fastify-zod-validator.js'
 import { ulid } from './lib/id.js'
 import timeout from './lib/timeout.js'
@@ -20,7 +20,7 @@ export async function startServer ({ port, host = '0.0.0.0', logger }) {
   app.setErrorHandler(errorHandler)
   app.setNotFoundHandler(notFoundHandler)
 
-  app.register(fastifyHelmet, {})
+  app.register(fastifyHelmet, { global: true })
 
   await app.listen({ port, host })
   return async function closeServer () {
